@@ -1,17 +1,17 @@
 import { useRef, useState, useEffect } from "react";
-import React from "react";
+import react from "react";
 
-const Home = () => {
+const Login = () => {
     const userRef = useRef();
     const errRef = useRef();
 
     const[user, setUser] = useState('');
     const[pwd, setPwd] = useState('');
     const[errMsg, setErrMsg] = useState('');
-    const[success, setSuccess] = useState(false);
+    const[success, setSuccess] = useState('');
 
     useEffect(() => {
-        userRef.current.focus();
+        useRef.current.focus();
     }, [])
 
     useEffect(() => {
@@ -26,9 +26,9 @@ const Home = () => {
         setSuccess(true);
     }
 
-    return (
+    return(
         <>
-           {success ? (
+        {success ? (
             <section>
                 <h1>You are logged in!</h1>
                 <br />
@@ -79,4 +79,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Login;
